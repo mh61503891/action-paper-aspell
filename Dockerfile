@@ -13,6 +13,6 @@ LABEL "com.github.actions.color"="green"
 COPY README.md /
 
 RUN apt-get update && apt-get install -y aspell aspell-en git
-
+COPY script/aspell.bash /script/aspell.bash
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
