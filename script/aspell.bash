@@ -23,7 +23,7 @@ words=$(cat $X_ASPELL_FILES | aspell --lang=$X_ASPELL_LANG --mode=$X_ASPELL_MODE
 
 echo "Target files:"
 for file in $X_ASPELL_FILES; do
-  echo "- $file"
+  echo "* $file"
 done
 
 if [[ -z $words ]]; then
@@ -35,7 +35,7 @@ fi
 
 echo "Misspelled words:"
 for word in $words; do
-  echo "- $word"
+  echo "* $word"
 done
 
 echo "Result of grep:"
