@@ -2,6 +2,10 @@
 
 ## Usage
 
+### Workflow
+
+`.github/main.workflow`:
+
 ```hcl
 workflow "Spell Checking with Aspell" {
   on = "push"
@@ -18,3 +22,20 @@ action "GitHub Action for Aspell" {
   }
 }
 ```
+
+### Environment variables
+
+|NAME|Default Value|Aspell's option|
+|---|---|---|
+|ASPELL_LANG|en|--lang|
+|ASPELL_MODE|tex|--mode|
+|ASPELL_PERSONAL|./.aspell.${ASPELL_LANG}.pws|--personal|
+|ASPELL_FILES|main.tex main.bib|These files are streamed to `aspell` by `cat`.|
+
+## License
+
+This action is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## Author
+
+Masayuki Higashino
