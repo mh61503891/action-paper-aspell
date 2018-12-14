@@ -1,8 +1,6 @@
-# GitHub Actions for Aspell
+# GitHub Actions for spell-checking with Aspell
 
 ## Usage
-
-### Workflow
 
 `.github/main.workflow`:
 
